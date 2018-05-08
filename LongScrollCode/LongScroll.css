@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+}
+#fullpage {
+    height: 100vh;
+    overflow:hidden;
+    z-index: -1;
+}
+#fullpage section {
+    height: 100vh;
+    z-index: -1;
+}
+#fullpage section h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 100vh;
+    font-size: 10em;
+    text-transform: uppercase;
+    z-index: -1;
+}
+#fullpage section:nth-child(1) {
+    background: #f00;
+    z-index: -1;
+}
+#fullpage section:nth-child(2) {
+    background: #ff0;
+    z-index: -1;
+}
+#fullpage section:nth-child(3) {
+    background: #0ff;
+    z-index: -1;
+}
+#fullpage section:nth-child(4) {
+    background: #f0f;
+    z-index: -1;
+}
+#fullpage section:nth-child(5) {
+    background: #0f0;
+    z-index: -1;
+}

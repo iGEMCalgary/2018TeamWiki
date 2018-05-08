@@ -1,38 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 body
 {
-	padding-top: 56px;
+	padding-top: 36px;
+	font-family: 'PT Sans', sans-serif;
 }
 @media (min-width: 980px)
 {
 	body
 	{
-		padding-top: 56px
+		padding-top: 36px;
+		font-family: 'PT Sans', sans-serif;
 	}
 }
 
 .img1
 {
 	max-width:30%;
-	height:auto;	
+	height:auto;
 }
 
-.img2 
+.img2
 {
-    max-width:100%;
+  max-width:100%;
 	height: auto;
 }
-
+.row {
+	text-align: center;
+}
 .row.r1
 {
 	background-color: #7cdbd5;
+	padding-top:5;
+	text-align: center;
 }
 .row.r2
 {
-	background-color: #f7ef6a;
+	background-color: #7cdbd5;
 	padding-top:5;
 	padding-bottom:5;
 	padding-left:5;
 	padding-right:;
 }
-
-

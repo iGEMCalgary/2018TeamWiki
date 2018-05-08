@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fullpage Scroll</title>
+        <link rel="stylesheet" href="LongScroll.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="LongScroll2.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="jquery.fullpage.min.js"></script>
+    </head>
+    <body>
+      <header>
+          <div id="fullpage">
+              <div class="section">
+                <h1 style="font-size:10vw; position: fixed;">
+                  <center>Section 1</center>
+                </h1>
+              </div>
+              <div class="section">
+                <h1 style="font-size:10vw; position: fixed;">
+                  <center>Section 2</center>
+                </h1>
+              </div>
+              <div class="section">
+                <h1 style="font-size:10vw; position: fixed;">
+                  <center>Section 3</center>
+                </h1>
+              </div>
+              <div class="section">
+                <h1 style="font-size:10vw; position: fixed;">
+                  <center>Section 4</center>
+                </h1>
+              </div>
+              <div class="section">
+                <h1 style="font-size:10vw; position: fixed;">
+                  <center>Section 5</center>
+                </h1>
+              </div>
+        </div>
+      <div id="navbar">
+                  <nav>
+                        <div class="menu-icon">
+                              <i class="fa fa-bars fa-2x"></i>
+                        </div>
+                        <div class="logo">
+                              LOGO
+                        </div>
+                        <div class="menu">
+                              <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Contact</a></li>
+                              </ul>
+                        </div>
+                  </nav>
+      </div>
+    </header>
+    <script type="text/javascript">
+          $(document).ready(function() {
+                $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+                });
+            });
+            // Scrolling Effect
+            $(window).on("scroll", function() {
+                  if($(window).scrollTop()) {
+                        $('nav').addClass('black');
+                  }
+                  else {
+                        $('nav').addClass('black');
+                  }
+            })
+            $('#fullpage').fullpage();
+        </script>
+    </body>
+</html>
