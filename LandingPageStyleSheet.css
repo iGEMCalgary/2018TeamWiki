@@ -1,0 +1,38 @@
+body
+{
+	padding-top: 56px;
+}
+@media (min-width: 980px)
+{
+	body
+	{
+		padding-top: 56px
+	}
+}
+
+.img1
+{
+	max-width:30%;
+	height:auto;	
+}
+
+.img2 
+{
+    max-width:100%;
+	height: auto;
+}
+
+.row.r1
+{
+	background-color: #7cdbd5;
+}
+.row.r2
+{
+	background-color: #f7ef6a;
+	padding-top:5;
+	padding-bottom:5;
+	padding-left:5;
+	padding-right:;
+}
+
+
