@@ -4,6 +4,10 @@ body
 	padding-top: 36px;
 	font-family: 'PT Sans', sans-serif;
 }
+.container-fluid {
+	padding-left: 75px;
+	padding-right: 75px;
+}
 @media (min-width: 980px)
 {
 	body
@@ -17,6 +21,7 @@ body
 {
 	max-width:30%;
 	height:auto;
+	vertical-align:middle;
 }
 
 .img2
@@ -25,12 +30,15 @@ body
 	height: auto;
 }
 .row {
-	text-align: center;
+		float: none;
+    margin: 0 auto;
+    text-align: center;
 }
 .row.r1
 {
-	background-color: #7cdbd5;
-	padding-top:5;
+	background-color: #CAEBF2;
+	padding-top: 75px;
+	padding-bottom: 75px;
 	text-align: center;
 }
 .row.r2
@@ -40,4 +48,12 @@ body
 	padding-bottom:5;
 	padding-left:5;
 	padding-right:;
+}
+.row.r3
+{
+	background-image: url("Project_Logo_Draft_1_footer.jpeg");
+	background-position: center bottom;
+	padding-top: 25px;
+	padding-bottom: 20px;
+	background-size: cover;
 }
