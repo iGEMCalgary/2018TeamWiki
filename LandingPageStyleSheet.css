@@ -29,7 +29,13 @@ body
   max-width:100%;
 	height: auto;
 }
-.row {
+.img3
+{
+	max-width: 100%;
+  max-height: 100%;
+}
+.row
+{
 		float: none;
     margin: 0 auto;
     text-align: center;
@@ -47,13 +53,31 @@ body
 	padding-top:5;
 	padding-bottom:5;
 	padding-left:5;
-	padding-right:;
+	padding-right:5;
 }
 .row.r3
 {
-	background-image: url("Project_Logo_Draft_1_footer.jpeg");
+	background-image: url("Project_Logo_Draft_1_footer.png");
 	background-position: center bottom;
-	padding-top: 25px;
+	padding-top: 20px;
 	padding-bottom: 20px;
 	background-size: cover;
+}
+
+#myBtn
+{
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 5px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+	background-color: transparent;
+}
+
+#myBtn:hover
+{
+	background-image: url("topclick.png") ;
 }
