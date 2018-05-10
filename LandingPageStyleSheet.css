@@ -79,5 +79,6 @@ body
 
 #myBtn:hover
 {
-	background-image: url("topclick.png") ;
+	background-image: url('topclick.png');
+	background-color: red;
 }
