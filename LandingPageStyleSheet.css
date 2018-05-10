@@ -29,10 +29,11 @@ body
   max-width:100%;
 	height: auto;
 }
-.img3
+.imgSocialMedia
 {
-	max-width: 100%;
-  max-height: 100%;
+	max-width: 50%;
+	max-height: 30%;
+
 }
 .row
 {
@@ -55,14 +56,24 @@ body
 	padding-left:5;
 	padding-right:5;
 }
-.row.r3
+.row.footer
 {
-	background-image: url("Project_Logo_Draft_1_footer.png");
+	background-image: url("triFront.png");
+	background-color: #F53240;
+	background-repeat: no-repeat;
 	background-position: center bottom;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	background-size: cover;
+	padding-top: 35px;
+	/*padding-bottom: 20px;*/
+	background-size: 100% auto;
+	/**/vertical-align: middle;
 }
+.container-fluid .container1
+{
+	height: 1000px;
+	
+	
+}
+
 
 #myBtn
 {
@@ -81,3 +92,48 @@ body
 {
 	background-image: url('topclick.png');
 }
+
+/* ERIKA DONT TOUCH!!!!!!!!!!!!!!!!!! OR I KILL YOU
+
+@media (-moz-touch-enabled: 1), (pointer:coarse) {
+    .something {
+        its: working;
+    }
+}*/
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) 
+{
+	
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {} 
+
+/* Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {} */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 768px) 
+{
+	
+	.imgSocialMedia
+	{
+		max-width: 50%;
+		max-height: 50%;
+	}
+	
+	.row.footer
+	{
+		background-image: url("triFront.png");
+		background-color: #F53240;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: 100% auto;
+		/**/vertical-align: middle;
+		
+	}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
