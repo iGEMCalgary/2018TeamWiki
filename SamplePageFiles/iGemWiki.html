@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>iGEM Website</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap's CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- My CSS -->
+        <link rel="stylesheet" href="iGemWiki.css">
+        <!-- Scripts for Long Scroll -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="jquery.fullpage.min.js"></script>
+        <!-- Bootstrap's JS -->
+        <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <div id="navbar">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <a class="navbar-brand" href="#">
+                    <img src="F_Logo.png" alt="F Logo" style="width:30%; height:auto">
+                </a>
+                <button class="navbar-toggler" type="button"data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Project
+                            </a>
+                            <div id="drop" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Problem</a>
+                                <a class="dropdown-item" href="#">Description</a>
+                                <a class="dropdown-item" href="#">Synthesis</a>
+                            </div>
+                        </li>
+                        <li class="nav-item active ">
+                            <a class="nav-link" href="#">Notebook</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Human Practices</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Judging</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Content -->
+        <div class="content">
+            <div id="fullpage">
+                <section><img src="Inception.jpg" alt="Inception" style="height:100%; width: auto" class="center"></section>
+                <section><img src="Dunkirk.jpg" alt="Dunkirk" style="height:100%; width: auto" class="center"></section>
+                <section><img src="Dark_Knight.jpg" alt="Dark Knight" style="height:100%; width: auto" class="center"></section>
+            </div>
+        </div>
+        <!-- Long Scroll Script -->
+        <script type="text/javascript">
+            $('#fullpage').fullpage();
+        </script>
+        <!-- Sticky Navigation Bar Script -->
+        <script>
+            window.onscroll = function() {myFunction()};
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky");
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+        </script>
+    </body>
+</html>
