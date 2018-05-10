@@ -4,6 +4,7 @@ body
 	padding-top: 36px;
 	font-family: 'PT Sans', sans-serif;
 }
+
 .container-fluid {
 	padding-left: 75px;
 	padding-right: 75px;
@@ -34,7 +35,6 @@ body
 {
 	max-width: 50%;
 	max-height: 30%;
-
 }
 .row
 {
