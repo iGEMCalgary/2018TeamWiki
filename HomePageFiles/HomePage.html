@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>iGEM UofC 2018</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Styles -->
+        
+        <!-- Bootstrap 4's CSS -->
+        <link rel="stylesheet" href="css/BootstrapCSS/bootstrap.min.css">
+        <!-- Long Scroll CSS -->
+        <link rel="stylesheet" href="css/LongScrollCSS/jquery.fullPage.css">
+        <!-- Font Awesome CSS -->
+        
+        <!-- UH OH! CDN! -->
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Home Page CSS -->
+        <link rel="stylesheet" href="HomePage.css">
+        
+        <!-- Scripts -->
+        
+        <!-- Long Scroll JS -->
+        <script src="js//LongScrollJS/jquery-3.3.1.min.js"></script>
+        <script src="js/LongScrollJS/jquery.fullpage.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    anchors: ['Project', 'Software', 'Human Practices', 'Contact Us'],
+                    sectionsColor: ['#F53240', '#F9BE02', '#02C8A7', '#AF7AC5'],
+                    navigation: true,
+                    navigationPosition: 'right',
+                    navigationTooltips: ['Project','Software','Human Practices', 'Contact Us'],
+                    css3: true,
+                    responsiveWidth: 750,
+                    responsiveHeight: 400,
+                    loopTop: true,
+                    loopBottom: true,
+                    afterResponsive: function(isResponsive){}
+                });
+            });
+        </script>
+        <!-- Bootstrap 4's JS -->
+        <script type="text/javascript" src="js/BootstrapJS/bootstrap.bundle.min.js"></script>
+        
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <div id="header">
+            <nav class="navbar navbar-expand-md bg-light navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="images/F_Logo.png" alt="F Logo" style="width:30%; height:auto">
+                </a>
+                <button class="navbar-toggler" type="button"data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Project
+                            </a>
+                            <div id="drop" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Problem</a>
+                                <a class="dropdown-item" href="#">Description</a>
+                                <a class="dropdown-item" href="#">Synthesis</a>
+                            </div>
+                        </li>
+                        <li class="nav-item active ">
+                            <a class="nav-link" href="#">Notebook</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Human Practices</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Judging</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Content -->
+        <div id="fullpage">
+            <!-- Project Preview -->
+            <div class="section" id="section0">
+                <div class="intro" id="slide0">
+                    <h1>Project</h1>
+                    <p>Blah, blah, blah, this is our project. Yikes.</p>
+                </div>
+            </div>
+            <!-- Software Preview -->
+            <div class="section" id="section1">
+                <div class="intro" id="slide1">
+                    <h1>Software</h1>
+                    <p>We made a bot. It does some cool stuff.</p>
+                </div>
+            </div>
+            <!-- Human Practices Preview -->
+            <div class="section" id="section2">
+                <div class="intro" id="slide2">
+                    <h1>Human Practices</h1>
+                    <p>Humans were involved in the creation of this project.</p>
+                </div>
+            </div>
+            <!-- Social Media -->
+            <div class="section" id="section3">
+                <div class="intro" id="slide3">
+                    <h1>Contact Us</h1>
+                    <ul id="social-media-list">
+                        <li><a href="#"><i class="fa fa-facebook-f fa-2x" aria-hidden="true"></i><span>Facebook</span></a></li>
+                        <li><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i><span>Twitter</span></a></li>
+                        <li><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i><span>Instagram</span></a></li>
+                        <li><a href="#"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i><span>Email</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
