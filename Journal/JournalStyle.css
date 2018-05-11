@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+body
+{
+	padding-top: 36px;
+	font-family: 'PT Sans', sans-serif;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+.inaccordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.active, .inaccordion:hover {
+    background-color: #ccc;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+  border: 1px solid #ddd;
+}
+.panel-group,
+.panel-group .panel,
+.panel-group .panel-heading,
+.panel-group .panel-heading a,
+.panel-group .panel-title,
+.panel-group .panel-title a,
+.panel-group .panel-body,
+.panel-group .panel-group .panel-heading + .panel-collapse > .panel-body {
+  border-radius: 2px;
+  border: 0;
+}
+.panel-group .panel-heading {
+  padding: 0;
+}
+.panel-group .panel-heading a {
+  display: block;
+  background: #668bb1;
+  color: #ffffff;
+  padding: 15px;
+  text-decoration: none;
+  position: relative;
+}
+.panel-group .panel-heading a.collapsed {
+  background: #eeeeee;
+  color: inherit;
+}
+.panel-group .panel-heading a:after {
+  content: '-';
+  position: absolute;
+  right: 20px;
+  top:5px;
+  font-size:30px;
+}
+.panel-group .panel-heading a.collapsed:after {
+  content: '+';
+}
+.panel-group .panel-collapse {
+  margin-top: 5px !important;
+}
+.panel-group .panel-body {
+  background: #ffffff;
+  padding: 15px;
+}
+.panel-group .panel {
+  background-color: transparent;
+}
+.panel-group .panel-body p:last-child,
+.panel-group .panel-body ul:last-child,
+.panel-group .panel-body ol:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 600px)
+{
+	.container-fluid {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+	.img1
+	{
+		max-width:20%;
+		height:auto;
+		vertical-align:middle;
+	}
+	.imgSocialMedia
+	{
+		max-width: 70%;
+		max-height: 50%;
+
+	}
+	.row.r1
+	{
+		background-color: #CAEBF2;
+		padding-top: 5%;
+		padding-bottom: 5%;
+
+		text-align: center;
+	}
+}
