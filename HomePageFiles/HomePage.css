@@ -5,7 +5,11 @@ body {
     color: #fff;
 }
 
-h1 {
+.section {
+    text-align: center;
+}
+
+.intro h1 {
     font-size: 5em;
     margin: 0 auto;
     padding: 0;
@@ -15,10 +19,6 @@ h1 {
     width: 50%;
     margin: 0 auto;
     font-size: 1.5em;
-}
-
-.section {
-    text-align: center;
 }
 
 /* Navigation Bar */
@@ -112,37 +112,38 @@ h1 {
     #social-media-list li a span {
         color: #fff;
         font-size: 2em;
-        padding-left: 20px;
     }
 
 }
 
 @media screen and (max-width: 1024px) {
 
+
     #social-media-list {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
+        /*        position: absolute;*/
+        /*        left: 50%;*/
+        /*        transform: translate(-50%);*/
         margin: 0;
         padding: 0;
+        display: inline-block;
     }
 
     #social-media-list li {
-        position: relative;
+        /*        position: relative;*/
         list-style: none;
         text-align: left;
     }
 
     #social-media-list li a {
-        width: 240px;
-        height: 60px;
-        line-height: 30px;
-        overflow: hidden;
-        display: block;
-        white-space: nowrap;
+        /*        width: 240px;*/
+        /*        height: 60px;*/
+        /*        line-height: 30px;*/
+        /*        overflow: hidden;*/
+        /*        display: block;*/
+        /*        white-space: nowrap;*/
         text-decoration: none;
-        transition: width 0.5s;
-        box-sizing: border-box;
+        /*        transition: width 0.5s;*/
+        /*        box-sizing: border-box;*/
     }
 
     #social-media-list li a .fa {
@@ -159,5 +160,6 @@ h1 {
         font-size: 1.5em;
         padding-left: 20px;
     }
+
 
 }
