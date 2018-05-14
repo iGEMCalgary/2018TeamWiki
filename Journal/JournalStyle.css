@@ -119,3 +119,25 @@ body
 		text-align: center;
 	}
 }
+
+.imgSocialMedia
+{
+	max-width: 50%;
+	max-height: 30%;
+}
+.row
+{
+		float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+.row.footer
+{
+	background-image: url("triFront.png");
+	background-color: #F53240;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	padding-top: 35px;
+	background-size: 100% auto;
+	/**/vertical-align: middle;
+}
