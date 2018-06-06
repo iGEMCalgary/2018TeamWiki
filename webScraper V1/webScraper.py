@@ -53,7 +53,7 @@ class Parser():
 			# Extract team name from links
 			linkParts = linksWithSoftware[i].split(':')
 			teamName = linkParts[2].split('/')
-			softData[i].append(teamName[0] + ':')
+			softData[i].append(teamName[0])
 			
 			softwareWikiSource = requests.get(linksWithSoftware[i]).text
 			soup = BeautifulSoup(softwareWikiSource, 'lxml')
