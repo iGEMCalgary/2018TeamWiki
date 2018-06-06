@@ -18,7 +18,6 @@ class Parser():
 		links = []							# All possible software pages
 		linksWithSoftware = []		# All populated software pages
 		
-		# TODO: make year variable - hard coded for testing purposes
 		source = requests.get('http://igem.org/Team_Wikis?year=' + year).text
 		soup = BeautifulSoup(source, 'lxml')
 		content = soup.find('div', id='content_Page')
