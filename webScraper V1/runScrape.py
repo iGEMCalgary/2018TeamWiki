@@ -1,5 +1,4 @@
 from webScraper import Parser
-from fileIO import fileHandler
 from intelligentParser import Summarizer
 
 p = Parser()
