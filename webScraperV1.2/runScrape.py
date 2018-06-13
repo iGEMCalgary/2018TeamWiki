@@ -1,7 +1,21 @@
 from webScraper import Parser
 from intelligentParser import Summarizer
 
-year = input('Please enter a year: ')
+
+def getYear(prompt=''):
+	while True:
+		try:
+			year = int(input(prompt))
+			if(year < 2008 or year > 2017):
+				raise Exception
+			break
+		except Exception:
+			print('\nInvalid input. ')
+			prompt = 'Please enter a valid year between 2008 and 2017 inclusive: '
+	return str(year)
+	
+year = getYear('Please enter a year: ')
+print('\nExtracting iGEM ' + year + ' software...')
 
 p = Parser()
 teamInfo = p.getData(year)
