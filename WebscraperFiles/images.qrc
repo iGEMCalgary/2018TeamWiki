@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="image1">
-    <file>Bot_Logo_2.png</file>
-    <file>Bot_Logo_1.png</file>
-  </qresource>
-</RCC>
