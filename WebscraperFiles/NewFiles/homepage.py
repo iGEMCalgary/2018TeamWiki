@@ -8,20 +8,21 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
         MainWindow.resize(1200, 800)
         MainWindow.setStyleSheet("QMainWindow {\n"
-"background: rgb(4, 15, 15);\n"
-"}\n"
-"\n"
-"QLineEdit {\n"
-"background: rgb(4, 15, 15);\n"
-"color: rgb(255, 255, 255);\n"
-"border: none;\n"
-"}")
+                                 "background: rgb(4, 15, 15);\n"
+                                 "}\n"
+                                 "\n"
+                                 "QLineEdit {\n"
+                                 "background: rgb(4, 15, 15);\n"
+                                 "color: rgb(255, 255, 255);\n"
+                                 "border: none;\n"
+                                 "}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -35,12 +36,15 @@ class Ui_MainWindow(object):
         self.label_4.setFont(font)
         self.label_4.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_4.setObjectName("label_4")
-        self.horizontalLayout_2.addWidget(self.label_4, 0, QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        spacerItem = QtWidgets.QSpacerItem(0, 200, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.horizontalLayout_2.addWidget(
+            self.label_4, 0, QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
+        spacerItem = QtWidgets.QSpacerItem(
+            0, 200, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         self.horizontalLayout_2.addItem(spacerItem)
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setObjectName("label_2")
-        self.horizontalLayout_2.addWidget(self.label_2, 0, QtCore.Qt.AlignRight|QtCore.Qt.AlignTop)
+        self.horizontalLayout_2.addWidget(
+            self.label_2, 0, QtCore.Qt.AlignRight | QtCore.Qt.AlignTop)
         self.verticalLayout_2.addLayout(self.horizontalLayout_2)
         self.abelabel = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
@@ -62,7 +66,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addWidget(self.label)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
-        spacerItem1 = QtWidgets.QSpacerItem(360, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        spacerItem1 = QtWidgets.QSpacerItem(
+            360, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem1)
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
         self.verticalLayout_3.setObjectName("verticalLayout_3")
@@ -76,19 +81,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.lineEdit)
         self.line = QtWidgets.QFrame(self.centralwidget)
         self.line.setStyleSheet("Line {\n"
-"color: rgb(255, 255, 255);\n"
-"}")
+                                "color: rgb(255, 255, 255);\n"
+                                "}")
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
         self.verticalLayout_3.addWidget(self.line)
         self.horizontalLayout.addLayout(self.verticalLayout_3)
-        spacerItem2 = QtWidgets.QSpacerItem(360, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        spacerItem2 = QtWidgets.QSpacerItem(
+            360, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem2)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-        spacerItem3 = QtWidgets.QSpacerItem(20, 200, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        spacerItem3 = QtWidgets.QSpacerItem(
+            20, 200, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         self.horizontalLayout_3.addItem(spacerItem3)
         self.verticalLayout_2.addLayout(self.horizontalLayout_3)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -106,11 +113,15 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Abe"))
-        self.label_4.setText(_translate("MainWindow", "<html><head/><body><p><img src=\":/Image_2/BookIcon.png\" height=\"30\"/><span style=\" font-size:16pt;\"> View All</span></p></body></html>"))
-        self.label_2.setText(_translate("MainWindow", "<html><head/><body><p><img src=\":/Image_1/CloseIcon.png\" height=\"30\"/></p></body></html>"))
+        self.label_4.setText(_translate(
+            "MainWindow", "<html><head/><body><p><img src=\":/Image_2/BookIcon.png\" height=\"30\"/><span style=\" font-size:16pt;\"> View All</span></p></body></html>"))
+        self.label_2.setText(_translate(
+            "MainWindow", "<html><head/><body><p><img src=\":/Image_1/CloseIcon.png\" height=\"30\"/></p></body></html>"))
         self.abelabel.setText(_translate("MainWindow", "Hi, I\'m Abe"))
-        self.label.setText(_translate("MainWindow", "What kind of software are you looking for ?"))
+        self.label.setText(_translate(
+            "MainWindow", "What kind of software are you looking for ?"))
         self.lineEdit.setText(_translate("MainWindow", "Enter a description"))
+
 
 import images_rc
 
@@ -122,4 +133,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-
