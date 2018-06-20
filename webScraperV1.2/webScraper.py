@@ -3,7 +3,6 @@ import requests
 import webbrowser
 import time
 import sys
-import errorMessages
 from html.parser import HTMLParser
 import lxml
 from lxml.html.clean import Cleaner
@@ -40,8 +39,6 @@ class Parser():
 			source = requests.get('http://igem.org/Team_Wikis?year=' + year).text
 
 		except requests.ConnectionError as e:
-			print(e)
-		except MissingSchema as e:
 			print(e)
 		except Exception as e:
 			print(e.__class__.__name__)
@@ -97,13 +94,7 @@ class Parser():
 					softData[len(softData)-1].append(teamName[0])
 				except Exception as e:
 					print(e)
-					softData[len(softData)-1].append('NONE')
+					softData[len(softData)-1].append('')
 				softData[len(softData)-1].append(content)
 
 		return softData
-		
-
-		
-		
-
-
