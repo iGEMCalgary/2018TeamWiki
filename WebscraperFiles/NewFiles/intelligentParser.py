@@ -1,10 +1,11 @@
 from webScraper import Parser
-import sys
 import nltk
+nltk.data.path.append(r'nltk_data_folder')
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.text import Text
 from nltk.probability import FreqDist
 import numpy
+import re
 
 ## Luhn's Algorithm for text summarization ##
 
@@ -29,9 +30,11 @@ class Summarizer:
 
         words = [w.lower() for sentence in normalizedSentences for w in
                  nltk.tokenize.word_tokenize(sentence)]
+
         fdist = nltk.FreqDist(words)
+        stopwords = nltk.corpus.stopwords.words('english')
         top_n_words = [w[0] for w in fdist.items()
-                       if w[0] not in nltk.corpus.stopwords.words('english')][:self.N]
+                       if w[0] not in stopwords][:self.N]
 
         scoredSentences = self.scoreSentences(normalizedSentences, top_n_words)
 
@@ -52,6 +55,7 @@ class Summarizer:
         top_n_scored = sorted(top_n_scored, key=lambda s: s[0])
 
         meanSummary = ''
+
         for (idx, score) in mean_scored:
             meanSummary += ' ' + \
                 normalizedSentences[idx][:1].capitalize(
@@ -63,28 +67,27 @@ class Summarizer:
                 normalizedSentences[idx][:1].capitalize(
                 ) + normalizedSentences[idx][1:]
 
-        return dict([('Success', True), ('SignificantDescription', meanSummary), ('TopNDescription', topNSummary)])
+        return dict([('Success', True), ('MeanDescription', meanSummary[1:]), ('TopNDescription', topNSummary[1:])])
 
     ## Strips new lines from text ##
     def stripNewLines(self, sentences):
-        # First pass at removing \n's
-        sentences = [s.lower() for s in sentences if not '\n' in s]
-
-        # Removes sentences with \n's that are not seperated by a space
         normalizedSentences = []
-        for sentence in sentences:
-            goodSentence = True
-            for index in range(0, len(sentence), len(sentence)-2 if len(sentence) > 2 else 1):
-                if sentence[index] == '\\' and sentence[index+1] == 'n':
-                    goodSentence = False
-                if not goodSentence:
-                    break
-            if goodSentence:
-                normalizedSentences.append(sentence)
+        sentences = [s.lower() for s in sentences]
+
+        for s in sentences:
+            s = re.sub(r'[^\x00-\x7f]', r'', s)
+            if '\n' in s:
+                s = s.replace('\n', ' ')
+                while '  ' in s:
+                    s = s.replace('  ', ' ')
+
+            if not 'page discussion view source history teams log in' in s and ('loading menubar' not in s and (not re.search(r'^team:\w+', s))):
+                normalizedSentences.append(s)
+
         return normalizedSentences
 
     ## Scores each sentence in the text by important word ##
-    ## position and frequency.										      ##
+    ## position and frequency.										    ##
     def scoreSentences(self, sentences, important_words):
         scores = []
         sentence_idx = -1

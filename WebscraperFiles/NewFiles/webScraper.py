@@ -35,7 +35,7 @@ class Parser():
     #		Note: Year functionality not implemented
     ##
 
-    def getSoftLinks(self, year):
+    def getSoftLinks(self, year, progress):
         links = []							# All possible software pages
         linksWithSoftware = []		# All populated software pages
 
@@ -45,13 +45,13 @@ class Parser():
 
         except requests.ConnectionError as e:
             print(e)
-        except MissingSchema as e:
-            print(e)
         except Exception as e:
             print(e.__class__.__name__)
 
         soup = BeautifulSoup(source, 'lxml')
         content = soup.find('div', id='content_Page')
+
+        progress.emit(10)
 
         for wiki in content.findAll('a'):
             links.append(wiki['href'] + "/Software")
@@ -66,6 +66,7 @@ class Parser():
                 pass
             else:
                 linksWithSoftware.append(links[i])
+            progress.emit(20 / len(links))
         return linksWithSoftware
 
     ##
@@ -73,9 +74,9 @@ class Parser():
     # Returns code for the wiki
     ##
 
-    def getData(self, year):
+    def getData(self, year, progress):
         softData = []
-        linksWithSoftware = self.getSoftLinks(str(year))
+        linksWithSoftware = self.getSoftLinks(str(year), progress)
         counter = 0
         for i in range(0, len(linksWithSoftware), 1):
             softwareWikiSource = requests.get(linksWithSoftware[i]).text
@@ -101,7 +102,8 @@ class Parser():
                     softData[len(softData)-1].append(teamName[0])
                 except Exception as e:
                     print(e)
-                    softData[len(softData)-1].append('NONE')
+                    softData[len(softData)-1].append('')
                 softData[len(softData)-1].append(content)
+            progress.emit(20 / len(linksWithSoftware))
 
         return softData
