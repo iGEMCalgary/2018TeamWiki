@@ -424,12 +424,16 @@ class Ui_Form(object):
             20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         self.horizontalLayout_10.addItem(spacerItem11)
         self.verticalLayout_5.addLayout(self.horizontalLayout_10)
-        self.stackedWidget.addWidget(self.page_2)
+        # self.stackedWidget.addWidget(self.page_2)
+        self.doSomething(self.stackedWidget, self.page_2)
         self.gridLayout.addWidget(self.stackedWidget, 0, 0, 1, 1)
 
         self.retranslateUi(Form)
         self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def doSomething(self, sw, w):
+        sw.addWidget(w)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
